@@ -3,10 +3,10 @@
 import streamlit as st
 import openai
 from openai import OpenAI
-from config import OPENAI_API_KEY
+import os
 
+os.environ["OPENAI_API_KEY"] = st.secrets["OPEN_API_KEY"])
 
-client = OpenAI(api_key = st.secrets["OPEN_API_KEY"])
 
 st.title("ChatGPT Plus DALL-E")
 
