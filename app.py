@@ -5,7 +5,7 @@ import openai
 from openai import OpenAI
 import os
 
-os.environ["OPENAI_API_KEY"] = st.secrets["OPEN_API_KEY"])
+os.environ["OPENAI_API_KEY"] = st.secrets["OPEN_API_KEY"]
 
 
 st.title("ChatGPT Plus DALL-E")
