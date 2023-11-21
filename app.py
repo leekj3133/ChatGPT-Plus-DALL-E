@@ -7,13 +7,15 @@ import os
 
 os.environ["OPENAI_API_KEY"] = st.secrets["OPEN_API_KEY"]
 
+from openai import OpenAI
+client = OpenAI()
 
 st.title("ChatGPT Plus DALL-E")
 
 
 with st.form("form"):
     user_input = st.text_input("Prompt")
-    suze = st.selectbox("Size",["1024x1024","512x512","256x256"])
+    size = st.selectbox("Size",["1024x1024","512x512","256x256"])
     submit = st.form_submit_button("Submit")
 
 if submit and user_input:
